@@ -9,7 +9,7 @@ add_compile_definitions(PICO_XOSC_STARTUP_DELAY_MULTIPLIER=64)
 set(PICO_SDK_PATH "${CMAKE_CURRENT_LIST_DIR}/pico-sdk")
 set(PICO_TINYUSB_PATH "${CMAKE_CURRENT_LIST_DIR}/tinyusb")
 set(PICO_PIO_USB_PATH "${CMAKE_CURRENT_LIST_DIR}/Pico-PIO-USB")
-set(PICO_NEOPIXEL_PATH "${CMAKE_CURRENT_LIST_DIR}/Adafruit_NeoPixel")  # Add this line
+set(PICO_NEOPIXEL_PATH "${CMAKE_CURRENT_LIST_DIR}/src/Adafruit_NeoPixel")  # Add this line
 set(PICO_BOARD_HEADER_DIRS "${CMAKE_CURRENT_LIST_DIR}/src/boards")
 
 include(pico_sdk_import.cmake)

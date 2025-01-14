@@ -28,4 +28,8 @@
 #define PICO_RP2040_B0_SUPPORTED 1
 #endif
 
+// --- WS2812 RGB LED ---
+#define NEOPIXEL_PIN 16
+#define NUM_PIXELS 1
+
 #endif

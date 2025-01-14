@@ -9,6 +9,7 @@ add_compile_definitions(PICO_XOSC_STARTUP_DELAY_MULTIPLIER=64)
 set(PICO_SDK_PATH "${CMAKE_CURRENT_LIST_DIR}/pico-sdk")
 set(PICO_TINYUSB_PATH "${CMAKE_CURRENT_LIST_DIR}/tinyusb")
 set(PICO_PIO_USB_PATH "${CMAKE_CURRENT_LIST_DIR}/Pico-PIO-USB")
+set(PICO_NEOPIXEL_PATH "${CMAKE_CURRENT_LIST_DIR}/lib/Adafruit_NeoPixel")  # Add this line
 set(PICO_BOARD_HEADER_DIRS "${CMAKE_CURRENT_LIST_DIR}/src/boards")
 
 include(pico_sdk_import.cmake)
@@ -58,6 +59,7 @@ target_include_directories(remapper PRIVATE
     src
     src/tusb_config_both
     ${PICO_PIO_USB_PATH}
+    ${PICO_NEOPIXEL_PATH}  # Add this line
 )
 
 target_link_libraries(remapper
@@ -73,6 +75,7 @@ target_link_libraries(remapper
     tinyusb_board
     tinyusb_pico_pio_usb
     usb_midi_host
+    Adafruit_NeoPixel  # Add this line
 )
 
 pico_set_binary_type(remapper copy_to_ram)
